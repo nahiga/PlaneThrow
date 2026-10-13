@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Plane 3D - Evolution</title>
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- CSS Faylı -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Oyun Ekranı -->
+    <div id="game-container"></div>
+    
+    <!-- UI (İstifadəçi İnterfeysi) -->
+    <div id="ui-layer">
+        <div id="stats">
+            <div>Məsafə: <span id="distanceText">0</span> m</div>
+            <div>💰 <span id="coinText">0</span></div>
+        </div>
+        <div id="controls-hint">
+            <strong>Atəşləmək:</strong> Ekrana sol kliklə, aşağı çək və burax.<br>
+            <strong>Havada İdarə:</strong> W, A, S, D
+        </div>
+        
+        <!-- Mağaza Pəncərəsi -->
+        <div id="shop-panel" class="hidden">
+            <h2>Uçuş Bitdi!</h2>
+            <p style="font-size: 18px; color: #555;">Məsafə: <span id="rewardText">0</span> m</p>
+            <p style="color: #2E7D32; font-weight: bold; font-size: 22px; margin: 15px 0;">Qazanılan: +<span id="earnedMoneyText">0</span> 💰</p>
+            
+            <div id="upgrades-container">
+                <button id="upgradeWingsBtn" class="upgrade-btn">Qanad Al (100 💰)</button>
+                <button id="upgradeTailBtn" class="upgrade-btn hidden">Quyruq Al (300 💰)</button>
+                <button id="upgradeEngineBtn" class="upgrade-btn hidden">Mühərrik Al (800 💰)</button>
+            </div>
+            
+            <button id="restartBtn" class="restart-btn">Növbəti Uçuş!</button>
+        </div>
+    </div>
+
+    <!-- JS Faylı -->
+    <script src="game.js"></script>
+</body>
+</html>
